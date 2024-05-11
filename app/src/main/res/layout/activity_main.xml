@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.simpledrawingapp.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btnColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="selectColor" />
+
+    <!-- Add this button for shape selection -->
+    <Button
+        android:id="@+id/btnShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Shape"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="selectShape" />
+
+    <!-- Add this seek bar for stroke width adjustment -->
+    <SeekBar
+        android:id="@+id/seekBarStrokeWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="20"
+        android:layout_below="@id/btnColor"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:progress="5" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="clearCanvas" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupShapes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/seekBarStrokeWidth"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radioButtonLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rectangle" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circle" />
+    </RadioGroup>
+
+
+
+
+</RelativeLayout>
