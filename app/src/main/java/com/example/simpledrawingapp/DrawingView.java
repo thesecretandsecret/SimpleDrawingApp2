@@ -1,6 +1,7 @@
 package com.example.simpledrawingapp;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -131,6 +132,14 @@ public class DrawingView extends SurfaceView implements SurfaceHolder.Callback {
 
     public int getCurrentColor() {
         return currentColor;
+    }
+
+    public Bitmap getBitmap() {
+        // Create a bitmap of the current drawing content
+        Bitmap bitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        draw(canvas); // Draw the content of the view onto the canvas
+        return bitmap;
     }
 
 }

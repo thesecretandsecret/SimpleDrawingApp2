@@ -48,6 +48,14 @@
         android:layout_alignParentEnd="true"
         android:onClick="clearCanvas" />
 
+    <!-- Button to save drawing -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"  />
 
     <RadioGroup
         android:id="@+id/radioGroupShapes"
